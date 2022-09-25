@@ -8,13 +8,11 @@
 x = int(input("Введите координату Х: "))
 y = int(input("Введите координату У: "))
 
-result = None
-
 if x == 0 and y != 0: print("Точка находится на оси Х")
 elif y == 0 and x != 0: print("Точка находится на оси У")
 elif x == 0 and y == 0: print("Точка в начале координат: Х = ", x, ", У = ", y)
 
-if x != 0 and y != 0:
+elif x != 0 and y != 0:
     if x > 0 and y > 0: result = 1
     elif x < 0 and y > 0: result = 2
     elif x < 0 and y < 0: result = 3
