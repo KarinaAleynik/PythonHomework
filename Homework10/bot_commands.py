@@ -1,10 +1,7 @@
-import fractions
-from telegram import Update
-from telegram.ext import Updater, CommandHandler, CallbackContext
-import datetime
-from spy import *
 import sympy
-import re
+from spy import *
+from telegram import Update
+from telegram.ext import CallbackContext
 
 
 def menu_command(update: Update, context: CallbackContext):
@@ -18,7 +15,7 @@ def sum_poly_command(update: Update, context: CallbackContext):
     log(update, context)
     msg = update.message.text
     print(msg)
-    items = msg.split('\n')  # запись через shift enter
+    items = msg.split('\n')
     poly1 = sympy.polys.polytools.poly_from_expr(str(items[1]))[0]
     poly2 = sympy.polys.polytools.poly_from_expr(str(items[2]))[0]
     polysum = poly1+poly2

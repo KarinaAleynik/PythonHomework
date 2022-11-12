@@ -3,7 +3,7 @@ from telegram.ext import Updater, CommandHandler, CallbackContext
 from bot_commands import *
 
 
-updater = Updater('Token')
+updater = Updater('token')
 
 
 updater.dispatcher.add_handler(CommandHandler('menu', menu_command))
