@@ -393,7 +393,8 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
-
+/.venv
+.gitignore
 
 # JetBrains Rider
 *.sln.iml
